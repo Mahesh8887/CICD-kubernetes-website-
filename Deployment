@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-4
+spec:
+  selector:
+    matchLabels:
+      app: project-4
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    RollingUpdate:
+      MaxSurge: 1
+      MaxUnavailable: 1
+      
+  template:
+    metadata:
+      labels:
+        app: project-4
+    spec:
+      containers:
+      - name: project-4
+        image: mahesh8887/project-4:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

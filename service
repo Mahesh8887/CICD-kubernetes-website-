@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service                          # Define to create service type object
+metadata:
+  name: project-4
+  labels:
+    app: project-4
+spec:
+  selector:
+    app: project-4             # Apply this service to any pods which has the spcific lable 
+  type: LoadBalancer           # Spcifies the services type i.e cluster IP or NodePort
+  ports:
+    - ports: 8080                      # Container port exposed
+      targetPort: 80               # Pods port
+      nodePort: 31200   

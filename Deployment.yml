@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: project-4
-        image: mahesh8887/project-4:latest
+        image: mahesh8887/project-1:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80

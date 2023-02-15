@@ -28,6 +28,7 @@ pipeline {
                 sh 'ssh -o $trictHostKeyChecking ubuntu@172.31.86.246 cd /home/ubuntu/'
                 sh 'ssh -o $trictHostKeyChecking ubuntu@172.31.86.246 docker image build -t $JOB_NAME:v1.$BUILD_ID mahesh8887/$JOB_NAME:v1.$BUILD_ID'
                 sh 'ssh -o $trictHostKeyChecking ubuntu@172.31.86.246 docker image build -t $JOB_NAME:v1.$BUILD_ID mahesh8887/$JOB_NAME:v1.$BUILD_ID'
+		                                                                 docker build tag $JOB_NAME:v1.$BUILD_ID mahesh8887/$JOB_NAME:v1.$BUILD_ID
             }
         }
         }   

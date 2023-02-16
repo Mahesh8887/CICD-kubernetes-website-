@@ -11,7 +11,7 @@ pipeline {
             steps{
                 sshagent(['jenkin_ansible']) {
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.35.31'
-                    sh "scp /var/lib/jenkins/workspace/project-1/* ubuntu@172.31.35.31:/home/ubuntu/"
+                    sh "scp /var/lib/jenkins/workspace/project-2/* ubuntu@172.31.35.31:/home/ubuntu/"
                 }
             }
         }
@@ -48,7 +48,7 @@ pipeline {
             steps{
                 sshagent(['kubernates']) {
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.3.83'
-                    sh "scp /var/lib/jenkins/workspace/project-1/* ubuntu@172.31.3.83:/home/ubuntu/"
+                    sh "scp /var/lib/jenkins/workspace/project-2/* ubuntu@172.31.3.83:/home/ubuntu/"
                 }
             }
         }

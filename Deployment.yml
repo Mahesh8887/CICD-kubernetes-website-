@@ -1,26 +1,37 @@
-apiVersion: apps
-kind: Deployment
 metadata:
-  name: project-4
+
+  name: todo-deployment
+
+  labels:
+
+    app: todo-app
+
 spec:
+
+  replicas: 3
+
   selector:
+
     matchLabels:
-      app: project-4
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-    RollingUpdate:
-      MaxSurge: 1
-      MaxUnavailable: 1
-      
+
+      app: todo-app
+
   template:
+
     metadata:
+
       labels:
-        app: project-4
+
+        app: todo-app
+
     spec:
+
       containers:
-      - name: project-4
-        image: mahesh8887/project-1:latest
-        imagePullPolicy: Always
+
+      - name: todo-app
+
+        image: mahesh8887/mahesh
+
         ports:
+
         - containerPort: 80

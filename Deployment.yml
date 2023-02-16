@@ -1,3 +1,7 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
 metadata:
 
   name: todo-deployment
@@ -5,6 +9,8 @@ metadata:
   labels:
 
     app: todo-app
+    
+  namespace: django-todo-app
 
 spec:
 
@@ -30,7 +36,7 @@ spec:
 
       - name: todo-app
 
-        image: mahesh8887/mahesh
+        image: mahesh8887/mahesh:latest
 
         ports:
 

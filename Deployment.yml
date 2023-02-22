@@ -36,7 +36,7 @@ spec:
 
       - name: todo-app
 
-        image: mahesh8887/mahesh:latest
+        image: mahesh8887/minikub:latest
 
         ports:
 

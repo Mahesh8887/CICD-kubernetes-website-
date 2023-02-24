@@ -4,13 +4,11 @@ kind: Deployment
 
 metadata:
 
-  name: todo-deployment
+  name: site-deployment
 
   labels:
 
-    app: todo-app
-    
-  namespace: django-todo-app
+    app: web-site
 
 spec:
 
@@ -20,7 +18,7 @@ spec:
 
     matchLabels:
 
-      app: todo-app
+      app: web-site
 
   template:
 
@@ -28,15 +26,15 @@ spec:
 
       labels:
 
-        app: todo-app
+        app: web-site
 
     spec:
 
       containers:
 
-      - name: todo-app
+      - name: web-site
 
-        image: mahesh8887/minikub:latest
+        image: mahesh8887/site:latest
 
         ports:
 

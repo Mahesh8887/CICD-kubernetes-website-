@@ -34,8 +34,8 @@ spec:
 
       - name: web-site
 
-        image: mahesh8887/site:latest
+        image: mahesh8887/project-2:latest
 
         ports:
 
-        - containerPort: 80
+        - containerPort: 3000

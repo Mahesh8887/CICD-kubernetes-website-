@@ -5,3 +5,5 @@
        command: kubectl apply -f /home/ubuntu/Deployment.yml
      - name: create new service
        command: kubectl apply -f /home/ubuntu/Service.yml
+     - name: create new service
+       command: kubectl apply -f /home/ubuntu/ingress.yml       
